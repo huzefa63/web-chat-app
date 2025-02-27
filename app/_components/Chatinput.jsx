@@ -18,6 +18,7 @@ function Chatinput({session}) {
             onChange={(e)=>setMessage(e.target.value)}
             required
             disabled={!session}
+              placeholder='Type a message'
               type="text"
               className="bg-white w-full p-3 tracking-widest outline-none  pr-20"
             />
