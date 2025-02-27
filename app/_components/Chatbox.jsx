@@ -8,7 +8,7 @@ function Chatbox({session}) {
     const [chats,setChats] = useState([]);
     const socket = useRef(null);
     useEffect(function(){
-        socket.current = io('http://localhost:4000');
+        socket.current = io('https://web-chat-api-53.onrender.com');
         socket.current.on('message',(message)=>{
             setChats(mes=>[...mes,message]);
             
