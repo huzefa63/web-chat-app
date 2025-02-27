@@ -8,12 +8,14 @@ function Chatinput({session}) {
   async function handler(e){
     e.preventDefault();
     const data = await axios.post('https://web-chat-api-53.onrender.com/api/chat',{message,image:session.user.image,name:session.user.name});
-    setMessage('');
   }
     return (
       <div className="absolute bottom-0 w-full">
         <div className="relative">
-          <form onSubmit={handler}>
+          <form onSubmit={(e)=>{
+        handler(e);
+        setMessage('');
+          }>
             <input
             value={message}
             onChange={(e)=>setMessage(e.target.value)}
