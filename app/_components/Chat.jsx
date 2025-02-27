@@ -10,7 +10,7 @@ function Chat({chat,session}) {
             width={20}
             height={20}
               className="bg-white h-[40px] w-[40px] rounded-full"
-              src={session.user.image}
+              src={chat.image}
               alt="User profile"
             />
             <h1 className="font-semibold tracking-widest text-white">
@@ -20,7 +20,7 @@ function Chat({chat,session}) {
           <div className="mt-2 items-center flex gap-3">
             <ArrowRightCircleIcon className="size-11" />
             <h1 className="font-semibold tracking-widest text-white">
-              {chat?.image}
+              {chat?.message}
             </h1>
           </div>
         </div>
