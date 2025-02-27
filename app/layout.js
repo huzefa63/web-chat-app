@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Button from "@/app/_components/Button";
+import ButtonOut from "@/app/_components/SignoutBtn"";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       >
         <nav className="absolute flex items-center justify-center w-full h-[10%] bg-white">
             <Button />
+        <ButtonOut />
         </nav>
         {children}
       </body>
