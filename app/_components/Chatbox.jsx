@@ -15,12 +15,20 @@ function Chatbox({session}) {
         })
     },[])
     return (
-        <div className="pt-5 relative bg-gray-400 h-[70vh] w-3/4">
-            {chats.map((chat,i)=>{
-                return <Chat session={session} chat={chat} key={i}/>
-            })}
-            <Chatinput session={session}/>
+        // <div className="pt-5 relative bg-gray-400 h-[70vh] w-3/4">
+        //     {chats.map((chat,i)=>{
+        //         return <Chat session={session} chat={chat} key={i}/>
+        //     })}
+        //     <Chatinput session={session}/>
+        // </div>
+         <div className="relative h-[80vh] w-3/4 bg-gray-400">
+        <div className="pt-5 overflow-auto  h-[65vh] w-full">
+          {chats.map((chat, i) => {
+            return <Chat session={session} chat={chat} key={i} />;
+          })}
         </div>
+        <Chatinput session={session} />
+      </div>
     )
 }
 
