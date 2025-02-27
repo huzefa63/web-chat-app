@@ -15,7 +15,7 @@ function Chatinput({session}) {
           <form onSubmit={(e)=>{
         handler(e);
         setMessage('');
-          }>
+          }}>
             <input
             value={message}
             onChange={(e)=>setMessage(e.target.value)}
