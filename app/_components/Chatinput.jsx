@@ -7,7 +7,7 @@ function Chatinput({session}) {
   const [message,setMessage] = useState('');
   async function handler(e){
     e.preventDefault();
-    const data = await axios.post('http://localhost:4000/api/chat',{message,image:session.user.image,name:session.user.name});
+    const data = await axios.post('https://web-chat-api-53.onrender.com/api/chat',{message,image:session.user.image,name:session.user.name});
   }
     return (
       <div className="absolute bottom-0 w-full">
