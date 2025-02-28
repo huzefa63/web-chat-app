@@ -26,7 +26,7 @@ function Chatbox({session}) {
         //     })}
         //     <Chatinput session={session}/>
         // </div>
-         <div className="relative lg:h-[80vh] lg:w-3/4 h-[40vh] w-[90%] bg-gray-400 mt-5">
+         <div className="relative lg:h-[80vh] lg:w-3/4 h-[40vh] w-[90%] bg-gray-400 mt-[9rem]">
         <div className="pt-5 overflow-auto  h-[65vh] w-full" ref={container}>
           {chats.map((chat, i) => {
             return <Chat session={session} chat={chat} key={i} />;
