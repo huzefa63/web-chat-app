@@ -5,7 +5,7 @@ import { auth } from "@/lib/googleAuth";
 export default async function Home() {
   const session = await auth();
   return (
-    <div className="flex h-screen lg:items-center mt-[9rem] justify-center">
+    <div className="flex h-screen lg:items-center justify-center">
       <Chatbox session={session} />
     </div>
   );
