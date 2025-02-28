@@ -14,6 +14,11 @@ function Chatbox({session}) {
             
         })
     },[])
+    const container = useRef(null);
+    useEffect(function(){
+      if(!container.current) return;
+      container.current.scrollTop = container.current.scrollHeight;
+    },[chats])
     return (
         // <div className="pt-5 relative bg-gray-400 h-[70vh] w-3/4">
         //     {chats.map((chat,i)=>{
@@ -22,7 +27,7 @@ function Chatbox({session}) {
         //     <Chatinput session={session}/>
         // </div>
          <div className="relative h-[80vh] w-3/4 bg-gray-400 mt-5">
-        <div className="pt-5 overflow-auto  h-[65vh] w-full">
+        <div className="pt-5 overflow-auto  h-[65vh] w-full" ref={container}>
           {chats.map((chat, i) => {
             return <Chat session={session} chat={chat} key={i} />;
           })}
